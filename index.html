@@ -5,7 +5,26 @@
     <title>Webシステム構築基礎 第2回課題</title>
 </head>
 <body>
+    
+<div id="clock" style="font-size: 30px; font-weight: bold; text-align: center; margin: 20px;">
+</div>
 
+<script>
+function showTime() {
+    const now = new Date();
+
+    const h = String(now.getHours()).padStart(2, '0');
+    const m = String(now.getMinutes()).padStart(2, '0');
+    const s = String(now.getSeconds()).padStart(2, '0');
+
+    document.getElementById("clock").textContent =
+        h + ":" + m + ":" + s;
+}
+
+showTime();
+setInterval(showTime, 1000);
+</script>
+    
 <h1>Webシステム構築基礎 第2回課題</h1>
 <p>野口航太 (AAA027001)</p>
 
